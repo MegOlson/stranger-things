@@ -7,7 +7,6 @@ import { Player } from '../player.model';
 import { PlayerService } from '../player.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-path',
   templateUrl: './path.component.html',
@@ -23,7 +22,8 @@ export class PathComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location,
     private playerService: PlayerService,
-    private pathService: PathService
+    private pathService: PathService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -33,6 +33,19 @@ export class PathComponent implements OnInit {
       this.pathId = parseInt(urlParameters['id']);
     });
     this.pathToDisplay = this.pathService.getPathById(this.pathId);
+    console.log(this.pathToDisplay);
   }
+
+  option1(pathToDisplayNext: Path) {
+    this.pathId = parseInt(pathToDisplayNext.option1[1]);
+    this.pathToDisplay = this.pathService.getPathById(this.pathId);
+    this.router.navigate(['paths', this.pathId]);
+  }
+
+  // option1(pathToDisplay: Path) {
+  //   this.pathId = parseInt(pathToDisplay.option1[1]);
+  //   this.pathToDisplay = this.pathService.getPathById(this.pathId);
+  //   this.router.navigate(['paths', this.pathId]);
+  // }
 
 }
