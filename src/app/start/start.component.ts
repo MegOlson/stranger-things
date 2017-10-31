@@ -10,7 +10,11 @@ import { PlayerService } from '../player.service';
 })
 export class StartComponent implements OnInit {
   player: Player;
-  constructor(private router: Router, private playerService: PlayerService) { }
+
+  constructor(
+    private router: Router,
+    private playerService: PlayerService
+  ) { }
 
   ngOnInit() {
     this.player = this.playerService.getPlayer();
