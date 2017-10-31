@@ -1,3 +1,13 @@
-<p>
-  welcome works!
-</p>
+
+<img [src]="fullImagePath">
+<form>
+  <div class="form-group">
+    <label>Enter your name:</label>
+    <input #name class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Pick a Color:</label>
+    <input #color type="color" value="#ff0000">
+  </div>
+  <button class="btn btn-danger" (click)="submitForm(name.value, color.value)">Go!</button>
+</form>

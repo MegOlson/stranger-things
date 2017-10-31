@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+body {
+  background-color: black;
+  color: #ff1515;
+  font-family: 'Special Elite', cursive;
+}
