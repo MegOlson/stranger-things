@@ -7,13 +7,15 @@ import { routing } from './app.routing';
 import { PlayerService } from './player.service';
 import { StartComponent } from './start/start.component';
 import { PathComponent } from './path/path.component';
+import { LoseComponent } from './lose/lose.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     StartComponent,
-    PathComponent
+    PathComponent,
+    LoseComponent
   ],
   imports: [
     BrowserModule,

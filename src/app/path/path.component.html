@@ -1,9 +1,7 @@
 <h3>{{player.score}}</h3>
 
 <h4>{{pathToDisplay.description}}</h4>
-<!-- <h5><a routerLink="/paths/{{pathToDisplay.option1[1]}}">{{pathToDisplay.option1[0]}}</a></h5>
-<h5><a routerLink="/paths/{{pathToDisplay.option2[1]}}">{{pathToDisplay.option2[0]}}</a></h5> -->
 
-<button type="button" class="btn" (click)="option1(pathToDisplay)">{{pathToDisplay.option1[0]}}</button>
+<a type="button" class="btn" (click)="option1(pathToDisplay)">{{pathToDisplay.option1[0]}}</a>
 
-<button type="button" class="btn" (click)="option2(pathToDisplay)">{{pathToDisplay.option2[0]}}</button>
+<a type="button" class="btn" (click)="option2(pathToDisplay)">{{pathToDisplay.option2[0]}}</a>

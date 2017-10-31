@@ -37,15 +37,25 @@ export class PathComponent implements OnInit {
   }
 
   option1(pathToDisplayNext: Path) {
-    this.pathId = parseInt(pathToDisplayNext.option1[1]);
-    this.pathToDisplay = this.pathService.getPathById(this.pathId);
-    this.router.navigate(['paths', this.pathId]);
+    this.player.score += pathToDisplayNext.scoreModifier;
+    if (this.player.score < 0) {
+      this.router.navigate(['lose']);
+    } else {
+      this.pathId = parseInt(pathToDisplayNext.option1[1]);
+      this.pathToDisplay = this.pathService.getPathById(this.pathId);
+      this.router.navigate(['paths', this.pathId]);
+    }
   }
 
-  // option1(pathToDisplay: Path) {
-  //   this.pathId = parseInt(pathToDisplay.option1[1]);
-  //   this.pathToDisplay = this.pathService.getPathById(this.pathId);
-  //   this.router.navigate(['paths', this.pathId]);
-  // }
+  option2(pathToDisplayNext: Path) {
+    this.player.score += pathToDisplayNext.scoreModifier;
+    if (this.player.score < 0) {
+      this.router.navigate(['lose']);
+    } else {
+      this.pathId = parseInt(pathToDisplayNext.option2[1]);
+      this.pathToDisplay = this.pathService.getPathById(this.pathId);
+      this.router.navigate(['paths', this.pathId]);
+    }
+  }
 
 }

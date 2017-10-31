@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { StartComponent } from './start/start.component';
 import { PathComponent } from './path/path.component';
+import { LoseComponent } from './lose/lose.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
    {
      path: 'paths/:id',
      component: PathComponent
+   },
+   {
+     path: 'lose',
+     component: LoseComponent
    }
  ];
 
