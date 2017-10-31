@@ -6,12 +6,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { PlayerService } from './player.service';
 import { StartComponent } from './start/start.component';
+import { PathComponent } from './path/path.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    StartComponent
+    StartComponent,
+    PathComponent
   ],
   imports: [
     BrowserModule,
